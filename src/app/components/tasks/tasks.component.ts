@@ -13,12 +13,19 @@ export class TasksComponent implements OnInit {
 
   constructor(private readonly tasksService: TaskService) {}
 
-  public async ngOnInit(): Promise<void> {
+  public ngOnInit() {
     //such like a promise
-    /*     this.tasksService.getTasks().subscribe((tasks) => {
-      tasks = this.tasks;
-    }); */
+    this.tasksService.getTasks().subscribe((tasks) => (this.tasks = tasks));
 
-    this.tasks = await this.tasksService.getTasks();
+    // this.tasks = await this.tasksService.getTasks();
+  }
+
+  public deleteTask(task: Task) {
+    this.tasksService.deleteTask(task).subscribe(
+      () =>
+        (this.tasks = this.tasks.filter((filterTask) => {
+          filterTask.id !== task.id;
+        }))
+    );
   }
 }

@@ -14,8 +14,6 @@ export class ButtonComponent implements OnInit {
 
   @Output() btnClick = new EventEmitter();
 
-  constructor() {}
-
   public ngOnInit(): void {}
 
   public onClick() {
