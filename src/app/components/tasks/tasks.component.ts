@@ -21,11 +21,13 @@ export class TasksComponent implements OnInit {
   }
 
   public deleteTask(task: Task) {
-    this.tasksService.deleteTask(task).subscribe(
-      () =>
-        (this.tasks = this.tasks.filter((filterTask) => {
-          filterTask.id !== task.id;
-        }))
-    );
+    this.tasksService
+      .deleteTask(task)
+      .subscribe(
+        () =>
+          (this.tasks = this.tasks.filter(
+            (filterTask) => filterTask.id !== task.id
+          ))
+      );
   }
 }
