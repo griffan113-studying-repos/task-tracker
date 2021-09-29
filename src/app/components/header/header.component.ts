@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   public ngOnInit(): void {}
 
-  public handleAddTask() {
+  public handleAddTask(): void {
     console.log('Add Task');
   }
 }
