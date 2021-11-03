@@ -15,7 +15,7 @@
     {
       "text": "Fazer Algo",
       "day": "Hoje",
-      "reminder": false,
+      "reminder": true,
       "id": 4
     }
   ]
