@@ -11,6 +11,12 @@
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
       "reminder": true
+    },
+    {
+      "text": "Fazer Algo",
+      "day": "Hoje",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
